@@ -316,6 +316,9 @@
   padding-right: 4rem;
   padding-left: 4rem;
 }
+.content img.m0 {
+  margin: 0;
+}
 body h1,
 body .h1 {
   display: block;
@@ -437,6 +440,12 @@ body td {
   font-family: "Meslo LG";
   src: local("Meslo LG S"), url("../lib/meslo-LG/MesloLGS-Regular.ttf") format("truetype");
 }
+@font-face {
+  font-family: Katex;
+  src: url("../../lib/katex/KaTeX_Main-Regular.ttf"), url("../../lib/katex/KaTeX_Main-Regular.woff2") format('woff2'), url("../../lib/katex/KaTeX_Main-Regular.woff") format('woff'), url("../../lib/katex/KaTeX_Main-Regular.ttf") format('truetype');
+  font-weight: normal;
+}
+@import url("../../lib/katex/katex.min.css");
 *,
 *:before,
 *:after {
@@ -888,7 +897,7 @@ body {
   z-index: 5000000;
   width: 100%;
   border-top: 1px solid #666;
-  background: #f5f5f5;
+  background: #f0f0f0;
   transition: opacity 0.2s;
 }
 #footer-post a {
@@ -1550,6 +1559,7 @@ pre code {
 }
 code {
   padding: 0 5px;
+  background-color: #e4e4e4;
   border-radius: 2px;
   -webkit-border-radius: 2px;
 }
@@ -1558,7 +1568,7 @@ code {
   margin: 1rem 0;
   padding: 10px 15px;
   border-radius: 4px;
-  background: #f5f5f5;
+  background: #f0f0f0;
   font-family: "Menlo", "Meslo LG", monospace;
   -webkit-border-radius: 4px;
 }
