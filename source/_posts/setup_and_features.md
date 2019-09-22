@@ -6,7 +6,7 @@ tags: ['hexo', 'setup']
 
 ## Requirements
 
-I wanted to write the posts with vim in markdown and effortlessly publish my posts. Latex support was also a must. The fist challenge was to choose the right platform. I wasn't familiar at all with all the blogging platforms / static site generators out there. I began researching. All of the options seemed to be good and have a large variety of themes.
+I wanted to write the posts with vim and effortlessly publish my posts. Latex support was also a must. The fist challenge was to choose the right platform. I wasn't familiar with all the blogging platforms / static site generators out there. I began researching. All of the options seemed to be good and have a large variety of themes.
 
 ### Options
 
