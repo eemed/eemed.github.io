@@ -742,9 +742,12 @@ body {
   bottom: 2rem;
   margin-right: 2rem;
   margin-left: 15px;
+  border-radius: 2px;
+  background: #27a97c;
+  padding: 5px 7px;
 }
 #header-post #top-icon-tablet:hover {
-  color: #2bbc8a;
+  background: #2bbc8a;
 }
 #header-post .active {
   color: #2bbc8a;
