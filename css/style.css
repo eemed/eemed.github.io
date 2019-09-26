@@ -1082,6 +1082,9 @@ article header .author {
 article header .postdate {
   display: inline;
 }
+article .content h2 {
+  margin-left: 0.8rem;
+}
 article .content h2:before {
   position: absolute;
   top: -4px;
