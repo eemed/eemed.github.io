@@ -1,6 +1,6 @@
 ---
 title: Choosing and setting up a blog
-date: 21.09.2019 16:41
+date: 2019-09-21 16:41
 tags: ['hexo', 'setup']
 ---
 
