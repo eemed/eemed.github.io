@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Why I like to sync up my themes to the lighting in the room. During the day light theme is better and at night darker themes are nicer to look at. I want to switch between these modes in an instant.">
+<meta name="keywords" content="theming,neovim,terminal,tmux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Switching between dark and light themes in an instant">
+<meta property="og:url" content="http://yoursite.com/2019/11/04/theme-changing/index.html">
+<meta property="og:site_name" content=".eemedrc">
+<meta property="og:description" content="Why I like to sync up my themes to the lighting in the room. During the day light theme is better and at night darker themes are nicer to look at. I want to switch between these modes in an instant.">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-04T17:37:05.907Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Switching between dark and light themes in an instant">
+<meta name="twitter:description" content="Why I like to sync up my themes to the lighting in the room. During the day light theme is better and at night darker themes are nicer to look at. I want to switch between these modes in an instant.">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Switching between dark and light themes in an instant</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/eemed/repositories">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2019/11/04/setup_and_features/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/11/04/theme-changing/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/11/04/theme-changing/&text=Switching between dark and light themes in an instant"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/11/04/theme-changing/&title=Switching between dark and light themes in an instant"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/11/04/theme-changing/&is_video=false&description=Switching between dark and light themes in an instant"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Switching between dark and light themes in an instant&body=Check out this article: http://yoursite.com/2019/11/04/theme-changing/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/11/04/theme-changing/&title=Switching between dark and light themes in an instant"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/11/04/theme-changing/&title=Switching between dark and light themes in an instant"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/11/04/theme-changing/&title=Switching between dark and light themes in an instant"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/11/04/theme-changing/&title=Switching between dark and light themes in an instant"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/11/04/theme-changing/&name=Switching between dark and light themes in an instant&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#why"><span class="toc-number">1.</span> <span class="toc-text"> Why</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#requirements"><span class="toc-number">2.</span> <span class="toc-text"> Requirements</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#initial-colors"><span class="toc-number">3.</span> <span class="toc-text"> Initial colors</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#terminal-emulator"><span class="toc-number">3.1.</span> <span class="toc-text"> Terminal emulator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#less"><span class="toc-number">3.2.</span> <span class="toc-text"> Less</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tmux"><span class="toc-number">3.3.</span> <span class="toc-text"> Tmux</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#neovim"><span class="toc-number">3.4.</span> <span class="toc-text"> neovim</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#switching-themes"><span class="toc-number">4.</span> <span class="toc-text"> Switching themes</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#tmux-2"><span class="toc-number">4.1.</span> <span class="toc-text"> tmux</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#neovim-2"><span class="toc-number">4.2.</span> <span class="toc-text"> neovim</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#results"><span class="toc-number">5.</span> <span class="toc-text"> Results</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Switching between dark and light themes in an instant
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">.eemedrc</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2019-11-04T17:07:37.000Z" itemprop="datePublished">04.11.2019</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/neovim/">neovim</a>, <a class="tag-link" href="/tags/terminal/">terminal</a>, <a class="tag-link" href="/tags/theming/">theming</a>, <a class="tag-link" href="/tags/tmux/">tmux</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="why"><a class="markdownIt-Anchor" href="#why"></a> Why</h2>
+<p>I like to sync up my themes to the lighting in the room. During the day light theme is better and at night darker themes are nicer to look at. I want to switch between these modes in an instant.</p>
+<h2 id="requirements"><a class="markdownIt-Anchor" href="#requirements"></a> Requirements</h2>
+<p>I use a lot of terminal applications. So everything in the terminal needs to be able to switch between light and dark mode.</p>
+<p>Most important were:</p>
+<ul>
+<li>current terminal emulator</li>
+<li>tmux</li>
+<li>neovim</li>
+</ul>
+<h2 id="initial-colors"><a class="markdownIt-Anchor" href="#initial-colors"></a> Initial colors</h2>
+<h3 id="terminal-emulator"><a class="markdownIt-Anchor" href="#terminal-emulator"></a> Terminal emulator</h3>
+<p>I found a tool called <a href="https://github.com/dylanaraps/pal" target="_blank" rel="noopener">pal</a> by dylanaraps. Pal changes colors on currently open terminals. It uses escape codes so the terminal emulator just needs to understand them which most of the modern terminal emulators do. The colors can be supplied as a string or read from a file. I put the script to <code>~/.scripts/pal</code>.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Set colors from a string</span></span><br><span class="line">pal <span class="string">"1f221f a0ab9e b6bfb4 67a96c 90a992 79a985 47a961 c7c7c7 575957 a0ab9e b6bfb4 67a96c 90a992 79a985 47a961 c7c7c7"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Read from a file</span></span><br><span class="line">pal &lt; file</span><br></pre></td></tr></table></figure>
+<p>I created 2 files for dark and light themes.</p>
+<p><code>~/.colors/pal-dark</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#2c323c</span><br><span class="line">#ff0000</span><br><span class="line">#2ecc71</span><br><span class="line">#FF8C00</span><br><span class="line">#3465a4</span><br><span class="line">#cA70D6</span><br><span class="line">#20B2AA</span><br><span class="line">#d3d7cf</span><br><span class="line">#373e4b</span><br><span class="line">#ef2929</span><br><span class="line">#27ae60</span><br><span class="line">#fce94f</span><br><span class="line">#61afef</span><br><span class="line">#DA70D6</span><br><span class="line">#34e2e2</span><br><span class="line">#eeeeec</span><br></pre></td></tr></table></figure>
+<p><code>~/.colors/pal-light</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#f0f0f0</span><br><span class="line">#e45649</span><br><span class="line">#2ecc71</span><br><span class="line">#e5c07b</span><br><span class="line">#3465a4</span><br><span class="line">#a626a4</span><br><span class="line">#4e9f9f</span><br><span class="line">#222222</span><br><span class="line">#d0d0d0</span><br><span class="line">#ca1243</span><br><span class="line">#27ae60</span><br><span class="line">#d5b06b</span><br><span class="line">#4078f2</span><br><span class="line">#DB7093</span><br><span class="line">#0083be</span><br><span class="line">#181a1f</span><br></pre></td></tr></table></figure>
+<p>From pal documentation I found that these colors can be applied to new terminals using this snippet in <code>~/.bashrc</code>.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="built_in">read</span> -r &lt; ~/.cache/pal/colors; <span class="built_in">printf</span> %b <span class="string">"<span class="variable">$REPLY</span>"</span>; &#125; &amp; <span class="built_in">disown</span></span><br></pre></td></tr></table></figure>
+<h3 id="less"><a class="markdownIt-Anchor" href="#less"></a> Less</h3>
+<p>Less didn’t like the new colors and sometimes the background and foreground would be the same, making text unreadable. I found out that less actually uses environment variables to define those colors. I added custom color exports to my <code>~/.bashrc</code>. I haven’t noticed any other programs to have this problem.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Less</span></span><br><span class="line"><span class="built_in">export</span> LESS_TERMCAP_mb=$<span class="string">'\E[6m'</span>          <span class="comment"># begin blinking</span></span><br><span class="line"><span class="built_in">export</span> LESS_TERMCAP_md=$<span class="string">'\E[37m'</span>         <span class="comment"># begin bold</span></span><br><span class="line"><span class="built_in">export</span> LESS_TERMCAP_us=$<span class="string">'\E[4;37m'</span>       <span class="comment"># begin underline</span></span><br><span class="line"><span class="built_in">export</span> LESS_TERMCAP_so=$<span class="string">'\E[1;1;47m\E[1;1;30m'</span>    <span class="comment"># begin standout-mode - info box</span></span><br><span class="line"><span class="built_in">export</span> LESS_TERMCAP_me=$<span class="string">'\E[0m'</span>          <span class="comment"># end mode</span></span><br><span class="line"><span class="built_in">export</span> LESS_TERMCAP_ue=$<span class="string">'\E[0m'</span>          <span class="comment"># end underline</span></span><br><span class="line"><span class="built_in">export</span> LESS_TERMCAP_se=$<span class="string">'\E[0m'</span>          <span class="comment"># end standout-mode</span></span><br></pre></td></tr></table></figure>
+<h3 id="tmux"><a class="markdownIt-Anchor" href="#tmux"></a> Tmux</h3>
+<p>You could create 2 different themes for tmux, but I just used pal defined colors to avoid that. If you want to use 2 different themes for tmux just follow along.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">set-option -g status-interval 1</span><br><span class="line">######## THEME ##########</span><br><span class="line"># Basic status bar colors</span><br><span class="line">set -g status-style bg=colour8</span><br><span class="line"></span><br><span class="line">setw -g window-status-current-style fg=green</span><br><span class="line">setw -g window-status-style fg=white</span><br><span class="line">set-window-option -g mode-style bg=white,fg=black</span><br><span class="line"></span><br><span class="line"># Left side of status bar</span><br><span class="line">set-option -g status-left-length 40</span><br><span class="line">set-option -g status-left &quot;&quot;</span><br><span class="line">set-option -g status-left-style fg=yellow</span><br><span class="line"></span><br><span class="line"># Right side of status bar</span><br><span class="line">set-option -g status-right-length 70</span><br><span class="line">set-option -g status-right &quot; %H:%M:%S %d.%m.%y&quot;</span><br><span class="line"></span><br><span class="line">set-option -g message-style fg=black,bg=colour12</span><br><span class="line">set-option -g message-command-style fg=black,bg=colour12</span><br><span class="line"></span><br><span class="line"># Window status</span><br><span class="line">set-option -g window-status-format &quot; #I:#W &quot;</span><br><span class="line">set-option -g window-status-style fg=default</span><br><span class="line">set-option -g window-status-current-format &quot; #I:#W &quot;</span><br><span class="line">set-option -g window-status-current-style fg=black,bg=colour12</span><br><span class="line"></span><br><span class="line"># Window separator</span><br><span class="line">set-option -g window-status-separator &quot;&quot;</span><br><span class="line"></span><br><span class="line"># Window status alignment</span><br><span class="line">set-option -g status-justify left</span><br><span class="line"></span><br><span class="line">set-option -g pane-border-style fg=colour8</span><br><span class="line">set-option -g pane-active-border-style fg=blue</span><br></pre></td></tr></table></figure>
+<h3 id="neovim"><a class="markdownIt-Anchor" href="#neovim"></a> neovim</h3>
+<p>To get neovim to respect the current theme I created a script that checks if the current background is light or dark and outputs the theme name. It simply uses pal cache to determine the background color. Put this script somewhere in your path. Mine is at <code>~/.scripts/pal_theme</code>.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/usr/bin/env bash</span></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">test</span> -f ~/.cache/pal/colors ; <span class="keyword">then</span></span><br><span class="line">    bg_hex=$(grep -o <span class="string">"#[a-fA-F0-9]\&#123;6\&#125;"</span> ~/.cache/pal/colors | head -n1 | tr -d <span class="string">'#'</span>)</span><br><span class="line">    r=$(<span class="built_in">printf</span> <span class="string">"%d"</span> 0x<span class="variable">$&#123;bg_hex:0:2&#125;</span>)</span><br><span class="line">    g=$(<span class="built_in">printf</span> <span class="string">"%d"</span> 0x<span class="variable">$&#123;bg_hex:2:2&#125;</span>)</span><br><span class="line">    b=$(<span class="built_in">printf</span> <span class="string">"%d"</span> 0x<span class="variable">$&#123;bg_hex:4:2&#125;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 382 = (255 + 255 + 255) / 2</span></span><br><span class="line">    <span class="keyword">if</span> [ $((<span class="variable">$r</span> + <span class="variable">$g</span> + <span class="variable">$b</span>)) -gt 382 ]; <span class="keyword">then</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"light"</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">echo</span> <span class="string">"dark"</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">exit</span> $?</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    <span class="built_in">exit</span> 1</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<p>Using this script we can create a wrapper function in <code>~/.bashrc</code> to launch neovim.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">neovim_bg_control</span></span>() &#123;</span><br><span class="line">  <span class="keyword">if</span> <span class="built_in">test</span> -f ~/.scripts/pal_theme ; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">local</span> theme=$(~/.scripts/pal_theme)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> [ <span class="variable">$theme</span> = <span class="string">"light"</span> ]; <span class="keyword">then</span></span><br><span class="line">	env VIM_THEME=<span class="string">"light"</span> nvim <span class="string">"<span class="variable">$@</span>"</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      nvim <span class="string">"<span class="variable">$@</span>"</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    nvim <span class="string">"<span class="variable">$@</span>"</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line">  <span class="built_in">return</span> $?</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">alias</span> vim=<span class="string">"neovim_bg_control"</span></span><br></pre></td></tr></table></figure>
+<p>I experimented with <code>nvim -c &quot;set background=&lt;theme&gt;&quot;</code> but it caused the default background to flash before the actual background is set. This is because the <code>init.vim</code> is evaluated first and then the given command is executed. Then I found a way to use an environment variable. Because this environment variable is set before launch we can make use of it directly in <code>init.vim</code>.</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">" Load theme depending on environment variable</span></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">exists</span>(<span class="string">"$VIM_THEME"</span>) &amp;&amp; $VIM_THEME == <span class="string">"light"</span></span><br><span class="line">  <span class="keyword">set</span> background=light</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">  <span class="keyword">set</span> background=dark</span><br><span class="line"><span class="keyword">endif</span></span><br></pre></td></tr></table></figure>
+<p>The theme is now set at startup.</p>
+<h2 id="switching-themes"><a class="markdownIt-Anchor" href="#switching-themes"></a> Switching themes</h2>
+<p>I use a script called <code>~/.scripts/switch_theme</code> to switch between light and dark mode. It uses rofi as a nice way to select the theme but also works from the commandline.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"><span class="keyword">if</span> [ -x <span class="string">"<span class="variable">$(command -v rofi)</span>"</span> ] ; <span class="keyword">then</span></span><br><span class="line">        theme=$(<span class="built_in">echo</span> -ne <span class="string">"dark\nlight"</span> | rofi -p <span class="string">"Switch to theme:"</span> -dmenu -theme default)</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">        theme=<span class="variable">$1</span></span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">current_theme=$(~/.scripts/pal_theme)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$theme</span> = <span class="string">"dark"</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="keyword">if</span> [ <span class="variable">$current_theme</span> = <span class="string">"light"</span> ]; <span class="keyword">then</span></span><br><span class="line">                killall -s 10 nvim</span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line">        <span class="variable">$HOME</span>/.scripts/pal &lt; <span class="variable">$HOME</span>/.colors/pal-dark</span><br><span class="line"></span><br><span class="line"><span class="keyword">elif</span> [ <span class="variable">$theme</span> = <span class="string">"light"</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="keyword">if</span> [ <span class="variable">$current_theme</span> = <span class="string">"dark"</span> ]; <span class="keyword">then</span></span><br><span class="line">                killall -s 10 nvim</span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line">        <span class="variable">$HOME</span>/.scripts/pal &lt; <span class="variable">$HOME</span>/.colors/pal-light</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<p>Pal takes care of the terminal emulator theme switching at runtime but what about tmux and neovim?</p>
+<h3 id="tmux-2"><a class="markdownIt-Anchor" href="#tmux-2"></a> tmux</h3>
+<p>tmux is a server that you can command straight from the commandline. If you are using 2 theme files for example <code>~/.tmux-dark-status</code> and <code>~/.tmux-light-status</code>. An easy way is to integrate this into the script is:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> [ <span class="variable">$theme</span> = <span class="string">"dark"</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="keyword">if</span> [ <span class="variable">$current_theme</span> = <span class="string">"light"</span> ]; <span class="keyword">then</span></span><br><span class="line">                killall -s 10 nvim</span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line">        tmux <span class="built_in">source</span>-file ~/.tmux-dark-status</span><br><span class="line">        <span class="variable">$HOME</span>/.scripts/pal &lt; <span class="variable">$HOME</span>/.colors/pal-dark</span><br><span class="line"></span><br><span class="line"><span class="keyword">elif</span> [ <span class="variable">$theme</span> = <span class="string">"light"</span> ]; <span class="keyword">then</span></span><br><span class="line">        <span class="keyword">if</span> [ <span class="variable">$current_theme</span> = <span class="string">"dark"</span> ]; <span class="keyword">then</span></span><br><span class="line">                killall -s 10 nvim</span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line">        tmux <span class="built_in">source</span>-file ~/.tmux-light-status</span><br><span class="line">        <span class="variable">$HOME</span>/.scripts/pal &lt; <span class="variable">$HOME</span>/.colors/pal-light</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<p>Because one tmux server runs all the sessions, the theme of all your tmux windows will be refreshed.</p>
+<h3 id="neovim-2"><a class="markdownIt-Anchor" href="#neovim-2"></a> neovim</h3>
+<p>From the <code>~/.scripts/switch_theme</code> script you can already guess what we are doing here. Neovim recently introduced a new feature which allows the use of SIGUSR1. We can make an autocommand for this signal to switch themes when the signal is received.</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>! <span class="title">Swap</span><span class="params">()</span></span></span><br><span class="line">    <span class="keyword">if</span> &amp;background ==? <span class="string">'dark'</span></span><br><span class="line">        <span class="keyword">set</span> background=light</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">set</span> background=dark</span><br><span class="line">    <span class="keyword">endif</span></span><br><span class="line"><span class="keyword">endfunction</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">autocmd</span> Signal * <span class="keyword">call</span> Swap()</span><br></pre></td></tr></table></figure>
+<h2 id="results"><a class="markdownIt-Anchor" href="#results"></a> Results</h2>
+<p>We can easily switch between light and dark themes with one command.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Switch to light theme</span></span><br><span class="line">switch_theme light</span><br><span class="line"></span><br><span class="line"><span class="comment"># Switch to dark theme</span></span><br><span class="line">switch_theme dark</span><br></pre></td></tr></table></figure>
+<p>All of the files modified:</p>
+<ul>
+<li>
+<p>Install <a href="https://github.com/dylanaraps/pal" target="_blank" rel="noopener">pal</a> to <code>PATH</code>.</p>
+</li>
+<li>
+<p>Possibly <code>~/.tmux-dark-status</code></p>
+</li>
+<li>
+<p>Possibly <code>~/.tmux-light-status</code></p>
+</li>
+<li>
+<p><code>~/.scripts/switch_theme</code></p>
+</li>
+<li>
+<p><code>~/.scripts/pal_theme</code></p>
+</li>
+<li>
+<p>Added the following to <code>~/.bashrc</code>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Pal to new terminals</span></span><br><span class="line">&#123; <span class="built_in">read</span> -r &lt; ~/.cache/pal/colors; <span class="built_in">printf</span> %b <span class="string">"<span class="variable">$REPLY</span>"</span>; &#125; &amp; <span class="built_in">disown</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="title">neovim_bg_control</span></span>() &#123;</span><br><span class="line">  <span class="keyword">if</span> <span class="built_in">test</span> -f ~/.scripts/pal_theme ; <span class="keyword">then</span></span><br><span class="line">    <span class="built_in">local</span> theme=$(~/.scripts/pal_theme)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> [ <span class="variable">$theme</span> = <span class="string">"light"</span> ]; <span class="keyword">then</span></span><br><span class="line">        env VIM_THEME=<span class="string">"light"</span> nvim <span class="string">"<span class="variable">$@</span>"</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      nvim <span class="string">"<span class="variable">$@</span>"</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">  <span class="keyword">else</span></span><br><span class="line">    nvim <span class="string">"<span class="variable">$@</span>"</span></span><br><span class="line">  <span class="keyword">fi</span></span><br><span class="line">  <span class="built_in">return</span> $?</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">alias</span> vim=<span class="string">"neovim_bg_control"</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Less</span></span><br><span class="line"><span class="built_in">export</span> LESS_TERMCAP_mb=$<span class="string">'\E[6m'</span>          <span class="comment"># begin blinking</span></span><br><span class="line"><span class="built_in">export</span> LESS_TERMCAP_md=$<span class="string">'\E[37m'</span>         <span class="comment"># begin bold</span></span><br><span class="line"><span class="built_in">export</span> LESS_TERMCAP_us=$<span class="string">'\E[4;37m'</span>       <span class="comment"># begin underline</span></span><br><span class="line"><span class="built_in">export</span> LESS_TERMCAP_so=$<span class="string">'\E[1;1;47m\E[1;1;30m'</span>    <span class="comment"># begin standout-mode - info box</span></span><br><span class="line"><span class="built_in">export</span> LESS_TERMCAP_me=$<span class="string">'\E[0m'</span>          <span class="comment"># end mode</span></span><br><span class="line"><span class="built_in">export</span> LESS_TERMCAP_ue=$<span class="string">'\E[0m'</span>          <span class="comment"># end underline</span></span><br><span class="line"><span class="built_in">export</span> LESS_TERMCAP_se=$<span class="string">'\E[0m'</span>          <span class="comment"># end standout-mode</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>Added the following to <code>init.vim</code></p>
+  <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span>! <span class="title">Swap</span><span class="params">()</span></span></span><br><span class="line">    <span class="keyword">if</span> &amp;background ==? <span class="string">'dark'</span></span><br><span class="line">        <span class="keyword">set</span> background=light</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">set</span> background=dark</span><br><span class="line">    <span class="keyword">endif</span></span><br><span class="line"><span class="keyword">endfunction</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">autocmd</span> Signal * <span class="keyword">call</span> Swap()</span><br><span class="line"></span><br><span class="line"><span class="comment">" Load theme depending on environment variable</span></span><br><span class="line"><span class="keyword">if</span> <span class="built_in">exists</span>(<span class="string">"$VIM_THEME"</span>) &amp;&amp; $VIM_THEME == <span class="string">"light"</span></span><br><span class="line">  <span class="keyword">set</span> background=light</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">  <span class="keyword">set</span> background=dark</span><br><span class="line"><span class="keyword">endif</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>Note that all of the scripts are in my <code>PATH</code> environment variable for easy access.</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/eemed/repositories">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#why"><span class="toc-number">1.</span> <span class="toc-text"> Why</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#requirements"><span class="toc-number">2.</span> <span class="toc-text"> Requirements</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#initial-colors"><span class="toc-number">3.</span> <span class="toc-text"> Initial colors</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#terminal-emulator"><span class="toc-number">3.1.</span> <span class="toc-text"> Terminal emulator</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#less"><span class="toc-number">3.2.</span> <span class="toc-text"> Less</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tmux"><span class="toc-number">3.3.</span> <span class="toc-text"> Tmux</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#neovim"><span class="toc-number">3.4.</span> <span class="toc-text"> neovim</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#switching-themes"><span class="toc-number">4.</span> <span class="toc-text"> Switching themes</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#tmux-2"><span class="toc-number">4.1.</span> <span class="toc-text"> tmux</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#neovim-2"><span class="toc-number">4.2.</span> <span class="toc-text"> neovim</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#results"><span class="toc-number">5.</span> <span class="toc-text"> Results</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://yoursite.com/2019/11/04/theme-changing/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://yoursite.com/2019/11/04/theme-changing/&text=Switching between dark and light themes in an instant"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://yoursite.com/2019/11/04/theme-changing/&title=Switching between dark and light themes in an instant"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://yoursite.com/2019/11/04/theme-changing/&is_video=false&description=Switching between dark and light themes in an instant"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Switching between dark and light themes in an instant&body=Check out this article: http://yoursite.com/2019/11/04/theme-changing/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://yoursite.com/2019/11/04/theme-changing/&title=Switching between dark and light themes in an instant"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://yoursite.com/2019/11/04/theme-changing/&title=Switching between dark and light themes in an instant"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://yoursite.com/2019/11/04/theme-changing/&title=Switching between dark and light themes in an instant"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://yoursite.com/2019/11/04/theme-changing/&title=Switching between dark and light themes in an instant"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://yoursite.com/2019/11/04/theme-changing/&name=Switching between dark and light themes in an instant&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2019 Eemeli Lottonen
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/eemed/repositories">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/katex/katex.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<!-- clipboard -->
+
+  <script src="/lib/clipboard/clipboard.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight .code pre").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      target: function(trigger) {
+        return trigger.nextElementSibling;
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-148325001-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
